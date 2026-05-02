@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projets — Shaïna Lama</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .page-hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 4rem 3rem;
+    }
+
+    .page-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-hero h1 em { font-style: italic; color: var(--violet-dark); }
+
+    .page-hero p {
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+
+    .projects-list {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 4rem 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .project-row {
+      display: grid;
+      grid-template-columns: 280px 1fr auto;
+      align-items: center;
+      gap: 2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .project-row:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.07);
+    }
+
+    .row-thumb {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .row-thumb.runeasy { background: linear-gradient(135deg, #1a1a2e, #2d1b4e); color: #C4BAE0; }
+    .row-thumb.cadillac { background: linear-gradient(135deg, #05050A, #2a0800); color: #E04B0A; }
+    .row-thumb.kodamer { background: linear-gradient(135deg, #1a2e1a, #0d1f0d); color: #7AC47A; }
+
+    .row-content { padding: 1.5rem 0; }
+
+    .row-year {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .row-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .row-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      max-width: 480px;
+    }
+
+    .row-arrow {
+      padding-right: 2rem;
+      font-size: 1.5rem;
+      color: var(--violet);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .page-hero { padding: 3rem 1.5rem 2rem; }
+      .projects-list { padding: 0 1.5rem 3rem; }
+      .project-row { grid-template-columns: 1fr; }
+      .row-thumb { height: 120px; }
+      .row-content { padding: 1.25rem 1.25rem 0; }
+      .row-arrow { padding: 1rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <!--<a href="index.html" class="logo">
+        <img src="logo.png" alt="logo" width="50px">
+    </a>-->
+
+  <nav>
+    <a href="index.html" class="logo">
+        <img src="logo.png" alt="logo" width="50px">
+    </a>
+    </div>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="projets.html" class="active">Projets</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <h1 class="fade-up">Mes <em>projets</em></h1>
+    <p class="fade-up-2">UX research, maquettes, expériences professionnelles.</p>
+  </div>
+
+  <div class="projects-list">
+    <a href="runeasy.html" class="project-row fade-up-2">
+      <img src="Runeasy.png" width="280px" srcset="">
+      <div class="row-content">
+        <p class="row-year">2026 — Projet personnel</p>
+        <p class="row-title">RunEasy — Application mobile running</p>
+        <p class="row-desc">Application pour aider les débutants à se (re)mettre au running de façon douce et motivante. UX research complète avec personas, wireframes et tableau de bord.</p>
+        <div>
+          <span class="tag">UX Research</span>
+          <span class="tag">Wireframing</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Mobile</span>
+        </div>
+      </div>
+      <div class="row-arrow">→</div>
+    </a>
+
+    <a href="cadillac.html" class="project-row fade-up-3">
+      <img src="cadillac.png" width="280px" srcset="">
+      <div class="row-content">
+        <p class="row-year">2025 — Défi Sharpen</p>
+        <p class="row-title">Newsletter Cadillac Optic</p>
+        <p class="row-desc">Conception d'un e-mail newsletter au style moderne pour présenter le dernier modèle électrique de Cadillac. Inspirations, identité visuelle, wireframe et maquette finale.</p>
+        <div>
+          <span class="tag">UI Design</span>
+          <span class="tag">Identité visuelle</span>
+          <span class="tag">Email design</span>
+          <span class="tag">Figma</span>
+        </div>
+      </div>
+      <div class="row-arrow">→</div>
+    </a>
+
+    <a href="kodamer.html" class="project-row fade-up-4">
+      <!--<div class="row-thumb kodamer">KODAMER</div>-->
+      <img src="kodamer_react.png" width="280px" srcset="">
+      <div class="row-content">
+        <p class="row-year">2024 — Stage de 1ère année BTS</p>
+        <p class="row-title">Stage chez Kodamer</p>
+        <p class="row-desc">Développement front-end en React, création d'un chatbot multiutilisateurs et conception d'une maquette UI pour le site de réservation du restaurant Koudia.</p>
+        <div>
+          <span class="tag">React</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Front-end</span>
+          <span class="tag">Maquette UI</span>
+        </div>
+      </div>
+      <div class="row-arrow">→</div>
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2026 Shaïna Lama — Portfolio BUT MMI</p>
+  </footer>
+
+</body>
+</html>

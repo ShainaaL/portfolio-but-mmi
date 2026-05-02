@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shaïna Lama — Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* HERO */
+    .hero {
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      padding: 5rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 4rem;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-eyebrow {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--violet);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--violet-dark);
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 440px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-visual {
+      flex: 0 0 340px;
+      height: 420px;
+      background: linear-gradient(135deg, var(--violet-light) 0%, var(--violet) 100%);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      top: -40px;
+      right: -40px;
+    }
+
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      bottom: 40px;
+      left: 20px;
+    }
+
+    .hero-initials {
+      font-family: 'DM Serif Display', serif;
+      font-size: 5rem;
+      color: white;
+      opacity: 0.9;
+      z-index: 1;
+    }
+
+    /* PROJETS APERÇU */
+    .projects-preview {
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem;
+    }
+
+    .projects-preview-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: var(--text);
+    }
+
+    .section-header a {
+      font-size: 14px;
+      color: var(--violet-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .section-header a:hover {
+      text-decoration: underline;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    }
+
+    .card-thumb {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .card-thumb.runeasy { background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 100%); color: #C4BAE0; }
+    .card-thumb.cadillac { background: linear-gradient(135deg, #05050A 0%, #2a0800 100%); color: #E04B0A; }
+    .card-thumb.kodamer { background: linear-gradient(135deg, #1a2e1a 0%, #0d1f0d 100%); color: #7AC47A; }
+
+    .card-body {
+      padding: 1.25rem;
+    }
+
+    .card-year {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .hero { flex-direction: column; padding: 3rem 1.5rem; min-height: auto; gap: 2rem; }
+      .hero-visual { flex: none; width: 100%; height: 240px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .projects-preview { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+       <!--<a href="index.html" class="logo">
+        <img src="logo.png" alt="logo" width="50px">
+    </a>-->
+
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="logo" width="50px">
+    </a>
+    </div>
+    <ul>
+     <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="projets.html">Projets</a></li> 
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-up">Portfolio — Candidature BUT MMI</p>
+      <h1 class="fade-up-2">Lama Shaïna,<br/><em>future UX/UI</em><br/>designer.</h1>
+      <p class="hero-sub fade-up-3">Je conçois des interfaces intuitives, utiles et élégantes. Diplômée d'un BTS SIO, je candidate en BUT MMI pour approfondir ma démarche créative.</p>
+      <div class="hero-btns fade-up-4">
+        <a href="projets.html" class="btn-primary">Voir mes projets</a>
+        <a href="CV_Shaina_MMI.pdf" class="btn-outline" target="_blank">Télécharger mon CV</a>
+      </div>
+    </div>
+    <div class="hero-visual fade-up-3">
+      <span class="hero-initials">SL</span>
+    </div>
+  </div>
+
+  <div class="projects-preview">
+    <div class="projects-preview-inner">
+      <div class="section-header">
+        <h2>Mes projets</h2>
+        <a href="projets.html">Voir tout →</a>
+      </div>
+      <div class="cards-grid">
+        <a href="runeasy.html" class="project-card">
+          <div class="card-thumb runeasy">RunEasy</div>
+          <div class="card-body">
+            <p class="card-year">2026 — Projet personnel</p>
+            <p class="card-title">Application mobile running</p>
+            <p class="card-desc">UX Research · Wireframing · Figma</p>
+          </div>
+        </a>
+        <a href="cadillac.html" class="project-card">
+          <div class="card-thumb cadillac">CADILLAC</div>
+          <div class="card-body">
+            <p class="card-year">2025 — Défi Sharpen</p>
+            <p class="card-title">Newsletter Cadillac Optic</p>
+            <p class="card-desc">UI Design · Identité visuelle · Email</p>
+          </div>
+        </a>
+        <a href="kodamer.html" class="project-card">
+          <div class="card-thumb kodamer">KODAMER</div>
+          <div class="card-body">
+            <p class="card-year">2024 — Stage</p>
+            <p class="card-title">Stage développeuse web & design</p>
+            <p class="card-desc">React · Figma · Front-end</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Shaïna Lama — Portfolio BUT MMI</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos — Shaïna Lama</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .about-hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 4rem 3rem;
+    }
+
+    .about-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .about-hero h1 em {
+      font-style: italic;
+      color: var(--violet-dark);
+    }
+
+    .about-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 4rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-text p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .skills-block {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    .skills-block h3 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .dispo-box {
+      background: var(--violet-light);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .dispo-box p {
+      font-size: 13px;
+      color: var(--violet-dark);
+      font-weight: 500;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .about-hero { padding: 3rem 1.5rem 2rem; }
+      .about-grid { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">
+        <img src="logo.png" alt="logo" width="50px">
+    </a>
+    </div>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="apropos.html" class="active">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="about-hero">
+    <h1 class="fade-up">À propos <em>de moi</em></h1>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-text fade-up-2">
+      <p>Je m'appelle <strong>Shaïna Lama</strong>, diplômée d'un BTS SIO option SLAM. Je candidate en <strong>BUT MMI</strong> pour approfondir ma démarche en UX/UI design.</p>
+      <p>C'est au fil de mes stages et projets en développement web que j'ai découvert et aimé l'univers du design d'interfaces entre conception, design et création d’interfaces centrées sur l’utilisateur.</p>
+      <p>J'ai eu l'occasion de créer des maquettes, de collaborer sur des projets React et de me former en autodidacte sur les outils de design comme Figma.</p>
+      <p>J'aime aussi la photographie — capturer un moment, choisir un cadre, c'est déjà penser composition et regard. Une sensibilité que je retrouve dans le design.</p>
+    </div>
+
+    <div class="fade-up-3">
+      <div class="skills-block">
+        <h3>Compétences</h3>
+        <div class="skills-list">
+          <span class="tag">Figma</span>
+          <span class="tag">Wireframing</span>
+          <span class="tag">UX Research</span>
+          <span class="tag">Prototypage</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">React</span>
+          <span class="tag">Design System</span>
+          <span class="tag">Identité visuelle</span>
+        </div>
+
+        <h3>Outils</h3>
+        <div class="skills-list">
+          <span class="tag">Figma</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Notion</span>
+          <span class="tag">Sharpen</span>
+        </div>
+
+        <div class="dispo-box">
+          <p>📍 En cours de candidature en BUT MMI</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Shaïna Lama — Portfolio BUT MMI</p>
+  </footer>
+
+</body>
+</html>
